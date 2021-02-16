@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/MainScreen"
+    >
+
+    <Button
+        android:id="@+id/game"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:onClick="OnClickGame"
+        app:layout_constraintBottom_toBottomOf="@+id/ManaBar"
+        app:layout_constraintEnd_toEndOf="@+id/Mana"
+        app:layout_constraintStart_toStartOf="@+id/Mana"
+        app:layout_constraintTop_toTopOf="@+id/Mana" />
+
+    <Button
+        android:id="@+id/heal"
+        android:layout_width="110dp"
+        android:layout_height="46dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:onClick="OnClickHeal"
+        app:layout_constraintBottom_toBottomOf="@+id/HP"
+        app:layout_constraintEnd_toEndOf="@+id/HP"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HP"
+        app:layout_constraintTop_toTopOf="@+id/HP"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/feed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:onClick="OnClickFeed"
+        app:layout_constraintBottom_toBottomOf="@+id/HP2"
+        app:layout_constraintEnd_toEndOf="@+id/StaminaBar"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/HP2"
+        app:layout_constraintTop_toTopOf="@+id/HP2"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:contentDescription="@string/todo"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_street" />
+
+    <ProgressBar
+        android:id="@+id/PointBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="280dp"
+        android:layout_height="39dp"
+        android:progress="30"
+        android:progressDrawable="@xml/pointbar"
+        app:layout_constraintBottom_toBottomOf="@+id/more"
+        app:layout_constraintEnd_toStartOf="@+id/more"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/more"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <TextView
+        android:id="@+id/HP"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_temp"
+        android:text="@string/HP"
+        android:textAlignment="center"
+        android:textColor="@color/FUCKINGBLACK"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194"
+        tools:text="Здоровье" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pet_name_3" />
+
+    <TextView
+        android:id="@+id/HP2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_temp"
+        android:text="@string/food"
+        android:textAlignment="center"
+        android:textColor="@color/FUCKINGBLACK"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194"
+        tools:text="@string/food" />
+
+    <TextView
+        android:id="@+id/Mana"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_temp"
+        android:text="@string/Happiness"
+        android:textAlignment="center"
+        android:textColor="@color/FUCKINGBLACK"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194"
+        tools:text="Счастье" />
+
+    <ProgressBar
+        android:id="@+id/StaminaBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@xml/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <ProgressBar
+        android:id="@+id/HpBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@xml/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <ProgressBar
+        android:id="@+id/ManaBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="30"
+        android:progressDrawable="@xml/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <ImageView
+        android:id="@+id/Pett"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:fontFamily="@font/main_temp"
+        android:text="@string/wtf"
+        android:textAlignment="center"
+        android:textColor="@color/colorName"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/HP"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/food"
+        android:layout_width="114dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        app:srcCompat="@drawable/empty_food" />
+
+    <LinearLayout
+        android:id="@+id/maskitems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/db_but_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/downbar_choose"
+            android:src="@drawable/menu_pet" />
+
+        <ImageButton
+            android:id="@+id/db_but_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@xml/button_down_bar"
+            android:onClick="OnClickShelter"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu_shelter" />
+
+        <ImageButton
+            android:id="@+id/db_but_4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@xml/button_down_bar"
+            android:onClick="OnClickPets"
+            android:src="@drawable/menu_pets" />
+
+        <ImageButton
+            android:id="@+id/db_but_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@xml/button_down_bar"
+            android:onClick="onClickProfile"
+            android:src="@drawable/menu_prof" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/more"
+        android:layout_width="91dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="18dp"
+        android:layout_weight="1"
+        android:background="@drawable/coins"
+        android:onClick="OnClickMore"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/PointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/PointBar"
+        app:layout_constraintEnd_toEndOf="@+id/PointBar"
+        app:layout_constraintStart_toStartOf="@+id/PointBar"
+        app:layout_constraintTop_toTopOf="@+id/PointBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shelter_page_back"
+    >
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/shelter_but"
+        android:fontFamily="@font/main_temp"
+        android:onClick="OnClickThanks"
+        android:text="Оставить заявку"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment"
+        app:layout_constraintVertical_bias="0.34" />
+
+    <LinearLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellow_back">
+
+        <LinearLayout
+            android:id="@+id/f_col"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/blank_name00"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:editable="false"
+                android:focusable="false"
+                android:backgroundTint="@android:color/transparent"
+                android:text="ФИО" />
+
+            <EditText
+                android:id="@+id/blank_phone00"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@android:color/transparent"
+                android:inputType="none"
+                android:focusable="false"
+                android:editable="false"
+                android:text="Phone"
+                android:clickable="false"
+                />
+
+            <EditText
+                android:id="@+id/blank_email00"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:inputType="none"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_weight="1"
+                android:text="Email"
+                android:clickable="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/s_col"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/blank_name11_sh"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="OnClickMain0"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/blank_phone11"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/blank_email11_sh"
+                style="@style/shelterstyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:accessibilityHeading="true"
+                android:layoutDirection="ltr"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/main_temp"
+        android:text="Заполните анкету:"
+        android:textColor="@color/shelter"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_temp"
+        android:text="Выбранный приют:"
+        android:textColor="#30A18E"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blank" />
+
+    <Button
+        android:id="@+id/back2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:background="@xml/button_l"
+        android:onClick="OnClickPetInfo"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+
+    <ImageView
+        android:id="@+id/yellow_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:src="@drawable/loc_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visit" />
+
+    <TextView
+        android:id="@+id/animal_name_blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_temp"
+        android:text="Имя приюта"
+        android:textColor="@color/colorWhite"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/yellow_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visit"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/blank_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:clickable="false"
+        android:fontFamily="@font/main_temp"
+        android:inputType="none"
+        android:textSize="20sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:text="Какой вопрос инетересует?"
+        android:textColor="#1A635C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="364dp"
+        android:layout_height="121dp"
+        android:background="@drawable/text_back"
+        android:fontFamily="@font/main_temp"
+        android:gravity="top"
+        android:hint="Введите сюда ваш вопрос"
+        android:paddingLeft="5dp"
+        android:textColor="@color/shelter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blank_date2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

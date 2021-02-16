@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">PetDonate</string>
+    <string name="todo">Hello</string>
+    <string name="choose_pet">Выберите себе питомца</string>
+    <string name="choose_breed">Выберите породу</string>
+    <string name="give_name">Дайте ему имя:</string>
+    <string name="choose">Выбрать</string>
+    <string name="left"><![CDATA[->]]></string>
+    <string name="right"><![CDATA[<-]]></string>
+    <string name="back">Назад</string>
+
+    <string name="don1">«Лучше усыпите меня»</string>
+    <string name="don2">«Купи лучше себе дошик»</string>
+    <string name="don3">«Хватит на 1 денёк»</string>
+    <string name="don4">«Щенячья радость»</string>
+
+    <string name="don1r">79 руб</string>
+    <string name="don2r">159 руб</string>
+    <string name="don3r">359 руб</string>
+    <string name="don4r">759 руб</string>
+    
+    <string name="thanks">Спасибо! \n Оплата прошла успешно!</string>
+    <string name="thanks_blank">Спасибо! \n Ваша заявка успешно отправлена!</string>
+    <string name="share">Рассказать друзьям</string>
+
+
+    <string name="server_name">https://demopet.herokuapp.com/</string>
+    <string name="food">Сытость</string>
+    <string name="breed1">Гарик</string>
+    <string name="breed2">Бульдог</string>
+    <string name="breed3">Харламов</string>
+    <string name="wtf">wtf</string>
+    <string name="HP">Здоровье</string>
+    <string name="Happiness">Счастье</string>
+    <string name="r50">"Протяни ещё 2 дня"</string>
+    <string name="r100">"Собачья щедрость"</string>
+    <string name="r200">"Собачий магнат"</string>
+
+    <string name="client_ID">1010110510479-p2r12ubpf0e17gh4vjajvr95vmj98d63.apps.googleusercontent.com</string>
+<!--    <string name="client_ID">1083886473794-44l57r1gmhbk7vpo58jm4022eeue98mt.apps.googleusercontent.com</string>-->
+    <string name="apiv">apiv1</string>
+
+
+    <string name="store_name" translatable="false">pet donaion</string>
+    <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
+    <string name="googlepay_status_checking" translatable="false">Checking if Google Pay is available...</string>
+    <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
+
+
+</resources>

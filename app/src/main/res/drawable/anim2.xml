@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dog_poodle_orange_00000" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00001" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00002" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00003" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00004" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00005" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00006" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00007" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00008" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00009" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00010" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00011" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00012" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00013" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00014" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00015" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00016" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00017" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00018" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_poodle_orange_00019" android:duration="@integer/dur_anim1"/>
+</animation-list>

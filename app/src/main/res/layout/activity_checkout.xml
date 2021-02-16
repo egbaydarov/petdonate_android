@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) Google
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+
+    android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    tools:context=".payment.CheckoutActivity">
+        android:layout_margin="@dimen/padding_small">
+
+
+        <TextView
+            android:id="@+id/text_item_name"
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/main_temp"
+            android:gravity="center"
+            android:text="kek"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.353" />
+
+        <ImageView
+            android:id="@+id/image_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="221dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="6dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toTopOf="@+id/text_item_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58" />
+
+        <TextView
+            android:id="@+id/text_item_price"
+            android:layout_width="358dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="224dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/googlepay_status"
+            android:layout_width="250dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/googlepay_status_checking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_item_price" />
+
+        <include
+            android:id="@+id/googlepay_button"
+            layout="@layout/googlepay_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_item_price" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

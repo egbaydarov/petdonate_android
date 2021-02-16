@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorBarInside">#5AB35C</color>
+    <color name="colorBarBack">#5380CB</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlack">#95000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorNavyBlue">#18417C</color>
+    <color name="colorLightBlue">#2F87C9</color>
+    <color name="colorName">#A5870C</color>
+    <color name="FUCKINGBLACK">#000000</color>
+    <color name="shelter">#28756F</color>
+    <color name="pointbar">#d7fff7</color>
+    <color name="colorDonation">#1A635C</color>
+
+
+</resources>

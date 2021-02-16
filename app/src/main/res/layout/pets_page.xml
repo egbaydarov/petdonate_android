@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shelter_page_back">
+
+    <Button
+        android:id="@+id/back2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:background="@xml/button_l"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:onClick="OnClickBack1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <ImageView
+        android:id="@+id/an_pic"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/an_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:fontFamily="@font/main_temp"
+        android:text="Морген"
+        android:textColor="@color/shelter"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_pic" />
+
+    <LinearLayout
+        android:id="@+id/an_description"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_name">
+
+        <LinearLayout
+            android:id="@+id/f_col"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/location_an"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="Приют"
+                android:textColor="#6ACCBC"
+                android:textSize="20sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="Здоровье"
+                android:textColor="#6ACCBC"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/charr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="Характер"
+                android:textColor="#6ACCBC"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/appear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/main_temp"
+                android:text="Внешность"
+                android:textColor="#6ACCBC"
+
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/s_col"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.65
+"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/an_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text='"Название"\n Адрес'
+                android:textColor="@color/shelter"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/an_health"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="1) param \n 2) param"
+                android:textColor="@color/shelter"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/an_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="Кушает, какает, спит, бегает и тп и тд"
+                android:textColor="@color/shelter"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/an_appear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/main_temp"
+                android:text="У него классное пятно в виде автотма АК-47"
+                android:textColor="@color/shelter"
+
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shelter_but"
+        android:fontFamily="@font/main_temp"
+        android:onClick="OnClickAccept"
+        android:text="Забрать к себе"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.427" />
+
+    <ImageView
+        android:id="@+id/sexx"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toStartOf="@+id/an_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/an_pic"
+        app:srcCompat="@drawable/boy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

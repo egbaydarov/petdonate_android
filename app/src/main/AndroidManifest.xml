@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hse.projectx.petdonate">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".main_screen.MainScreen"></activity>
+        <activity android:name=".startup.Welcome1"></activity>
+        <activity android:name=".startup.Welcome2"></activity>
+        <activity android:name=".startup.ChooseDog"></activity>
+        <activity android:name=".payment.ChooseFood"></activity>
+        <activity android:name=".startup.FirstScreen"></activity>
+        <activity android:name=".startup.SignInActivity"></activity>
+        <activity android:name=".info_screens.ShelterInfoActivity"></activity>
+        <activity android:name=".main_screen.ProfileActivity"></activity>
+        <activity android:name=".payment.CheckoutActivity"></activity>
+        <activity android:name=".forms.BlankShelterActivity"></activity>
+        <activity android:name=".forms.BlankPetActivity"></activity>
+        <activity android:name=".main_screen.ShelterActivity"></activity>
+        <activity android:name=".forms.ThanksBlank"></activity>
+        <activity android:name=".payment.ThanksPayment"></activity>
+        <activity android:name=".main_screen.PetsActivity"></activity>
+        <activity android:name=".info_screens.PetsInfoActivity"></activity>
+        <activity android:name=".payment.ChooseShelter"></activity>
+        <service android:enabled="true" android:name=".utils.MusicServ"/>
+
+        <activity
+            android:name=".startup.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

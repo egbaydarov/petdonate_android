@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dog_taksa_sad00000" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00001" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00002" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00003" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00004" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00005" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00006" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00007" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00008" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00009" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00010" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00011" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00012" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00013" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00014" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00015" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_taksa_sad00016" android:duration="@integer/dur_anim1"/>
+</animation-list>

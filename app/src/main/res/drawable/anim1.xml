@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/dog_buldog_00000" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00001" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00002" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00003" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00004" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00005" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00006" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00007" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00008" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00009" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00010" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00011" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00012" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00013" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00014" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00015" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00016" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00017" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00018" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00019" android:duration="@integer/dur_anim1"/>
+    <item android:drawable="@drawable/dog_buldog_00020" android:duration="@integer/dur_anim1"/>
+
+
+
+</animation-list>

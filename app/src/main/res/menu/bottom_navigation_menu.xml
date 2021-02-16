@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homef"
+        android:icon="@drawable/menu_icon_1notext"
+
+        android:title="Мой друг"
+
+
+        />
+    <item
+        android:id="@+id/sheltersf"
+        android:icon="@drawable/menu_icon_2notext"
+        android:title="Приюты"
+
+
+        />
+    <item
+        android:id="@+id/petsf"
+        android:icon="@drawable/menu_icon_3notext"
+        android:title="Каталог животных"
+
+
+
+        />
+    <item
+        android:id="@+id/profilef"
+        android:icon="@drawable/menu_icon_4notext"
+        android:title="Моя страница"
+
+        />
+</menu>
