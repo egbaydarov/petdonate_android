@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomRetryLayout"
+        android:alpha="0.9"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:background="@color/pointbar"
+
+        >
+
+        <TextView
+            android:id="@+id/retry_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_weight="1"
+            android:text="@string/no_internet"
+            android:textColor="@color/text_color_dark"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/retry_clickable_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="3"
+            android:background="#00009688"
+            android:onClick="OnRetryClicked"
+            android:text="@string/internet_retry"
+            android:textColor="@color/text_color_dark" />
+
+    </LinearLayout>
+</RelativeLayout>

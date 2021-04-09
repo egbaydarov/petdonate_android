@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import hse.projectx.petdonate.R;
+import hse.projectx.petdonate.payment.ChooseFood;
 import hse.projectx.petdonate.startup.SignInActivity;
 import hse.projectx.petdonate.network.State;
 import hse.projectx.petdonate.forms.BlankShelterActivity;
@@ -35,15 +37,13 @@ public class ShelterInfoActivity extends AppCompatActivity {
 
     Shelter sh;
     TextView dogs_count , cats_count, others_count;
-    @Override
-    public void onBackPressed() {
-        //кнопка назад
-    }
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.shelter_page);
+
 
         dogs_count = findViewById(R.id.t1);
         cats_count = findViewById(R.id.t2);
@@ -107,19 +107,16 @@ public class ShelterInfoActivity extends AppCompatActivity {
 
     public void OnClickShelters(View veiw)
     {
-        startActivity(new Intent(this, ShelterActivity.class));
+        onBackPressed();
     }
 
     public void OnClickAccept(View veiw)
     {
-        Intent intent = new Intent(this, BlankShelterActivity.class);
-        intent.putExtra(ShelterActivity.SHELTER, sh);
-        startActivity(intent);
+        startActivity(new Intent(this, ChooseFood.class));
     }
 
 
     public void OnClickShelter(View view) {
-        State.getShelters(this, true);
     }
 
     public void onClickProfile(View veiw) {
@@ -136,7 +133,6 @@ public class ShelterInfoActivity extends AppCompatActivity {
     }
 
     public void OnClickPets(View view) {
-        State.getShelters(this, false);
     }
 
     public void OnClickMain0(View view) {

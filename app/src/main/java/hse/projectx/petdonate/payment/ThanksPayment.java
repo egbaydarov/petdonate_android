@@ -26,7 +26,6 @@ public class ThanksPayment extends AppCompatActivity {
     }
 
     public void OnClickShelter(View view) {
-        State.getShelters(this, true);
     }
 
     public void onClickProfile(View veiw) {
@@ -43,7 +42,6 @@ public class ThanksPayment extends AppCompatActivity {
     }
 
     public void OnClickPets(View view) {
-        State.getShelters(this, false);
     }
 
     public void OnClickYes(View view) {

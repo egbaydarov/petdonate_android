@@ -1,5 +1,6 @@
 package hse.projectx.petdonate.network;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import hse.projectx.petdonate.forms.ThanksBlank;
+import hse.projectx.petdonate.main_screen.MainPage;
 import hse.projectx.petdonate.main_screen.MainScreen;
 import hse.projectx.petdonate.main_screen.PetsActivity;
 import hse.projectx.petdonate.main_screen.ShelterActivity;
@@ -61,28 +63,6 @@ public class State {
         transactions_count = data.getTransactions_count();
     }
 
-    public static void uploadPreferences(AppCompatActivity cntxt) {
-        SharedPreferences settings = cntxt.getApplicationContext().getSharedPreferences(FirstScreen.PREF_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putInt(FirstScreen.PET_HP, State.cur_HP);
-        editor.putInt(FirstScreen.PET_MANA, State.cur_Mana);
-        editor.putInt(FirstScreen.PET_STAMINA, State.cur_Stamina);
-        editor.putString(FirstScreen.PET_TYPE, State.type);
-        editor.putInt(FirstScreen.PET_COLOR, State.skin);
-        editor.putString(FirstScreen.PET_NAME, State.name);
-        editor.apply();
-    }
-
-    public static void downloadPreferences(AppCompatActivity cntxt) {
-        SharedPreferences settings = cntxt.getSharedPreferences(FirstScreen.PREF_NAME, 0);
-        State.cur_HP = settings.getInt(FirstScreen.PET_HP, 0);
-        State.cur_Mana = settings.getInt(FirstScreen.PET_MANA, 0);
-        State.cur_Stamina = settings.getInt(FirstScreen.PET_STAMINA, 0);
-        State.skin = settings.getInt(FirstScreen.PET_COLOR, 0);
-        State.name = settings.getString(FirstScreen.PET_NAME, "");
-        State.type = settings.getString(FirstScreen.PET_TYPE, "");
-    }
-
     public static void putStateQuery() {
         NetworkService.getInstance()
                 .getJSONApi()
@@ -121,7 +101,7 @@ public class State {
                 });
     }
 
-    public static void getStateQuery(AppCompatActivity context, Class ActivityClass) {
+    public static void getStateQuery(AppCompatActivity context, Class ActivityClass, Runnable errorCallback) {
         NetworkService.getInstance()
                 .getJSONApi()
                 .getUserData(SignInActivity.token)
@@ -132,10 +112,9 @@ public class State {
                         Log.w("TOKEN: ", SignInActivity.token);
                         if (response.code() == 200) {
                             State.setState(response.body().getState());
-                            State.uploadPreferences(context);
-                            context.startActivity(new Intent(context, MainScreen.class));
+                            context.startActivity(new Intent(context, MainPage.class));
                         } else if (response.code() == 207) {
-                            context.startActivity(new Intent(context, MainScreen.class));
+                            context.startActivity(new Intent(context, MainPage.class));
                         } else {
                             //Toast.makeText(context.getApplicationContext(), "", Toast.LENGTH_SHORT).show();
                             context.startActivity(new Intent(context, ActivityClass));
@@ -146,12 +125,15 @@ public class State {
                     @Override
                     public void onFailure(@NonNull Call<UserDataResponse> call, @NonNull Throwable t) {
                         Log.e("Failure", "Cant get data. SplashActivity");
+                        if (errorCallback != null) {
+                            errorCallback.run();
+                        }
                         t.printStackTrace();
                     }
                 });
     }
 
-    public static void getShelters(Context context, boolean startActivity) {
+    public static void getShelters() {
         NetworkService.getInstance()
                 .getJSONApi()
                 .getShelters()
@@ -161,34 +143,28 @@ public class State {
                         Log.w("GET SHELTERS", "result code = " + response.code() + "\n" + Arrays.toString(response.body()));
                         if (response.code() == 200) {
                             shelter_ids = new ArrayList<>(Arrays.asList(response.body()));
-                            if (startActivity)
-                                context.startActivity(new Intent(context, ShelterActivity.class));
-                            else {
-                                animal_ids = new ArrayList<>();
-                                for (Shelter sh : State.shelter_ids)
-                                    NetworkService.getInstance()
-                                            .getJSONApi()
-                                            .getAnimals(sh.getId())
-                                            .enqueue(new Callback<Animal[]>() {
-                                                @Override
-                                                public void onResponse(@NotNull Call<Animal[]> call, @NotNull Response<Animal[]> response) {
-                                                    Log.w("GET ANIMALS", "result code = " + response.code() + "\n" + Arrays.toString(response.body()));
-                                                    if (response.code() == 200) {
-                                                        animal_ids.addAll(Arrays.asList(response.body()));
-                                                        if (sh.getId().equals(shelter_ids.get(shelter_ids.size() - 1).getId()))
-                                                            context.startActivity(new Intent(context, PetsActivity.class));
-
-                                                    }
+                            animal_ids = new ArrayList<>();
+                            for (Shelter sh : State.shelter_ids)
+                                NetworkService.getInstance()
+                                        .getJSONApi()
+                                        .getAnimals(sh.getId())
+                                        .enqueue(new Callback<Animal[]>() {
+                                            @Override
+                                            public void onResponse(@NotNull Call<Animal[]> call, @NotNull Response<Animal[]> response) {
+                                                Log.w("GET ANIMALS", "result code = " + response.code() + "\n" + Arrays.toString(response.body()));
+                                                if (response.code() == 200) {
+                                                    animal_ids.addAll(Arrays.asList(response.body()));
                                                 }
+                                            }
 
-                                                @Override
-                                                public void onFailure(@NotNull Call<Animal[]> call, @NotNull Throwable t) {
-                                                    Log.e("Failure", "Cant get data. ShelterActivity");
-                                                    t.printStackTrace();
-                                                }
-                                            });
-                            }
+                                            @Override
+                                            public void onFailure(@NotNull Call<Animal[]> call, @NotNull Throwable t) {
+                                                Log.e("Failure", "Cant get data. ShelterActivity");
+                                                t.printStackTrace();
+                                            }
+                                        });
                         }
+
                     }
 
                     @Override
@@ -275,6 +251,7 @@ public class State {
                             context.startActivity(intent);
                         }
                     }
+
                     @Override
                     public void onFailure(@NotNull Call<Shelter[]> call, @NotNull Throwable t) {
                         Log.e("Failure", "Cant get data. ShelterActivity");

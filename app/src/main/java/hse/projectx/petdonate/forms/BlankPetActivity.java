@@ -30,7 +30,7 @@ public class BlankPetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blank_pet);
-        an = (Animal) getIntent().getSerializableExtra(PetsActivity.pet_instance);
+        an = (Animal) getIntent().getSerializableExtra(PetsActivity.PET_INSTANCE);
         if (SignInActivity.account != null) {
             name = findViewById(R.id.blank_name11_sh);
             name.setText(SignInActivity.account.getDisplayName());
@@ -53,7 +53,6 @@ public class BlankPetActivity extends AppCompatActivity {
     }
 
     public void OnClickShelter(View view) {
-        State.getShelters(this, true);
     }
 
     public void onClickProfile(View veiw) {
@@ -70,7 +69,6 @@ public class BlankPetActivity extends AppCompatActivity {
     }
 
     public void OnClickPets(View view) {
-        State.getShelters(this, false);
     }
 
     public void OnClickMain0(View view) {

@@ -9,54 +9,6 @@
     android:background="@drawable/backgroundthanks">
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/db_but_1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="OnClickMain0"
-            android:background="@xml/button_down_bar"
-            android:src="@drawable/menu_pet" />
-
-        <ImageButton
-            android:id="@+id/db_but_3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/downbar_choose"
-
-            android:scaleType="centerInside"
-            android:src="@drawable/menu_shelter" />
-
-        <ImageButton
-            android:id="@+id/db_but_4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@xml/button_down_bar"
-            android:onClick="OnClickPets"
-            android:src="@drawable/menu_pets" />
-
-        <ImageButton
-            android:id="@+id/db_but_2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@xml/button_down_bar"
-            android:onClick="onClickProfile"
-            android:src="@drawable/menu_prof" />
-
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/scroller"
         android:layout_width="match_parent"

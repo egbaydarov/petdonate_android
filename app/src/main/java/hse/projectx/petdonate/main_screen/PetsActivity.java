@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -25,7 +24,6 @@ import hse.projectx.petdonate.info_screens.PetsInfoActivity;
 import hse.projectx.petdonate.network.State;
 import hse.projectx.petdonate.network.models.Animal;
 import hse.projectx.petdonate.network.models.Shelter;
-import hse.projectx.petdonate.startup.SignInActivity;
 
 public class PetsActivity extends AppCompatActivity {
 
@@ -43,7 +41,7 @@ public class PetsActivity extends AppCompatActivity {
     public static final String APPEAR = "animal_appear";
     public static final String BEHAVIOR = "animal_behavior";
     public static final String ID = "animal_id";
-    public static String pet_instance = "pet_instance";
+    public static final String PET_INSTANCE = "pet_instance";
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +100,7 @@ public class PetsActivity extends AppCompatActivity {
             personViewHolder.cv.setMaxCardElevation(12F);
 
             View.OnClickListener ok = v -> {
-                intent.putExtra(pet_instance, pets.get(i));
+                intent.putExtra(PET_INSTANCE, pets.get(i));
                 intent.putExtra(NAME, pets.get(i).getName()); // пара ключ значение
                 intent.putExtra(SHELTER_ID, pets.get(i).getShelter_id());
                 intent.putExtra(APPEAR, pets.get(i).getAppear());
@@ -158,30 +156,7 @@ public class PetsActivity extends AppCompatActivity {
         </activity>
      */
 
-    public void OnClickShelter(View view) {
-        State.getShelters(this, true);
-    }
 
-    public void onClickProfile(View veiw) {
-        if (SignInActivity.account != null) {
-            Toast.makeText(this, "Logged In", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, ProfileActivity.class);
-            intent.putExtra("IsFirst", false);
-            startActivity(intent);
-        } else {
-            Intent intent = new Intent(this, SignInActivity.class);
-            intent.putExtra("IsFirst", false);
-            startActivity(intent);
-        }
-    }
-
-    public void OnClickPets(View view) {
-        State.getShelters(this, false);
-    }
-
-    public void OnClickMain0(View view) {
-        startActivity(new Intent(this, MainScreen.class));
-    }
 
 
 }

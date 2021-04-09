@@ -13,13 +13,9 @@ import hse.projectx.petdonate.main_screen.MainScreen;
 import hse.projectx.petdonate.network.State;
 import hse.projectx.petdonate.payment.CheckoutActivity;
 
+import static hse.projectx.petdonate.main_screen.SheltersAdapter.ID;
+
 public class ChooseFood extends AppCompatActivity {
-
-    @Override
-    public void onBackPressed() {
-        //кнопка назад
-    }
-
     int index;
     int[] pic = {R.drawable.plate1_food1, R.drawable.plate1_food2, R.drawable.plate1_food4, R.drawable.plate1_food5};
     int[] text = {R.string.don1, R.string.don2, R.string.don3, R.string.don4};
@@ -58,14 +54,14 @@ public class ChooseFood extends AppCompatActivity {
     }
 
     public void OnClickYes(View view) {
-
-        State.getShelterList(this, micros[index % 4]);
-
+        Intent intent = new Intent(this, CheckoutActivity.class);
+        //intent.putExtra(ID, shelters.get(i).getId());//TODO
+        intent.putExtra("MICROS", getIntent().getLongExtra("MICROS",1000));
+        startActivity(intent);
     }
 
     public void OnClickBack2(View view) {
-        Intent intent = new Intent(this, MainScreen.class);
-        startActivity(intent);
+        onBackPressed();
     }
 
 }

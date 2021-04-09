@@ -111,7 +111,6 @@ public class ChooseDog extends AppCompatActivity {
         intent.putExtra("p", Math.abs(n1 % 3));
         startActivity(intent);
         finish();
-        State.uploadPreferences(ChooseDog.this);
     }
 
 

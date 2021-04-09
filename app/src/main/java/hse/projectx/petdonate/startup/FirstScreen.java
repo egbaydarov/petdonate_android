@@ -99,7 +99,6 @@ public class FirstScreen extends AppCompatActivity{
             Intent intent = new Intent(this, ChooseDog.class);
             intent.putExtra("n", State.name); // пара ключ значение
             startActivity(intent);
-            State.uploadPreferences(FirstScreen.this);
 
         } else
             toast.show();

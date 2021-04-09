@@ -7,20 +7,18 @@ import com.google.gson.Gson;
 
 import java.time.LocalDateTime;
 
-public class LocalStorageImplementation<T> implements LocalStorage<VirtualPet> {
+public class LocalStorageImplementation implements LocalStorage<VirtualPet> {
     Gson gson = new Gson();
-    LocalDateTime LastUpdate;
 
-    Class<T> ClassToken;
-    static LocalStorageImplementation<VirtualPet> Instance;
-    T Data;
+    static LocalStorageImplementation Instance;
+    VirtualPet Data;
 
     private LocalStorageImplementation() {
     }
 
-    public static LocalStorageImplementation<VirtualPet> getInstance(Context context) {
+    public static LocalStorageImplementation getInstance(Context context) {
         if (Instance == null) {
-            Instance = new LocalStorageImplementation<>();
+            Instance = new LocalStorageImplementation();
             try {
                 Instance.Data = Instance.LoadFromStorage(context);
             } catch (LocalStorageException ex) {
@@ -48,10 +46,6 @@ public class LocalStorageImplementation<T> implements LocalStorage<VirtualPet> {
                 (GameConstants.PREFS_KEY, Context.MODE_PRIVATE);
         String json = settings.getString(GameConstants.VPET_KEY, null);
 
-        if (json == null) {
-            throw new LocalStorage.LocalStorageException();
-        }
-
         return gson.fromJson(json, VirtualPet.class);
     }
 
@@ -60,5 +54,13 @@ public class LocalStorageImplementation<T> implements LocalStorage<VirtualPet> {
         SharedPreferences settings = context.getSharedPreferences
                 (GameConstants.PREFS_KEY, Context.MODE_PRIVATE);
         settings.edit().remove(GameConstants.VPET_KEY).apply();
+    }
+
+    @Override
+    public boolean IsStorageExists(Context context) {
+        SharedPreferences settings = context.getSharedPreferences
+                (GameConstants.PREFS_KEY, Context.MODE_PRIVATE);
+        String json = settings.getString(GameConstants.VPET_KEY, null);
+        return json != null;
     }
 }

@@ -15,10 +15,7 @@ import hse.projectx.petdonate.main_screen.ProfileActivity;
 
 public class ThanksBlank extends AppCompatActivity {
 
-    @Override
-    public void onBackPressed() {
-        //кнопка назад
-    }
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +29,6 @@ public class ThanksBlank extends AppCompatActivity {
     }
 
     public void OnClickShelter(View view) {
-        State.getShelters(this, true);
     }
 
     public void onClickProfile(View veiw) {
@@ -49,7 +45,6 @@ public class ThanksBlank extends AppCompatActivity {
     }
 
     public void OnClickPets(View view) {
-        State.getShelters(this, false);
     }
 
     public void OnClickMain0(View view) {

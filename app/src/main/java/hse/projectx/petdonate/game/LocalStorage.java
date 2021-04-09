@@ -6,6 +6,7 @@ public interface LocalStorage<T extends java.io.Serializable> {
     void SaveToStorage(Context context);
     T LoadFromStorage(Context context);
     void DeleteLocalStorage(Context context);
+    boolean IsStorageExists(Context context);
 
     public class LocalStorageException extends RuntimeException
     {

@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/homef"
+        android:id="@+id/fragment_pet"
         android:icon="@drawable/menu_icon_1notext"
-
-        android:title="Мой друг"
-
-
+        android:title="@string/page_pet"
         />
     <item
-        android:id="@+id/sheltersf"
+        android:id="@+id/fragment_shelters"
         android:icon="@drawable/menu_icon_2notext"
-        android:title="Приюты"
-
-
+        android:title="@string/page_shelters"
         />
     <item
-        android:id="@+id/petsf"
+        android:id="@+id/fragment_animals"
         android:icon="@drawable/menu_icon_3notext"
-        android:title="Каталог животных"
-
-
-
+        android:title="@string/page_animals"
         />
     <item
-        android:id="@+id/profilef"
+        android:id="@+id/fragment_profile"
         android:icon="@drawable/menu_icon_4notext"
-        android:title="Моя страница"
-
+        android:title="@string/my_page"
         />
 </menu>

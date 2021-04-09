@@ -8,32 +8,23 @@
     tools:context=".startup.SignInActivity"
     android:background="@drawable/background_street2"
     >
+    <include layout="@layout/overlay_layout"/>
+    <include layout="@layout/floating_bottom_panel_layout"/>
 
 
-    <com.google.android.gms.common.SignInButton
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
         android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/google_sign_in"
+        app:isDarkTheme="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89" />
-
-    <Button
-        android:id="@+id/buttonSkipLog"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@xml/welcome_skip"
-        android:onClick="OnSkipClicked"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintVertical_bias="0.333" />
 
     <ImageView
         android:id="@+id/doggg1"

@@ -6,14 +6,18 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBlack">#95000000</color>
+    <color name="colorTotalBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorNavyBlue">#18417C</color>
     <color name="colorLightBlue">#2F87C9</color>
-    <color name="colorName">#A5870C</color>
+    <color name="colorName">#A9914C</color>
     <color name="FUCKINGBLACK">#000000</color>
     <color name="shelter">#28756F</color>
     <color name="pointbar">#d7fff7</color>
     <color name="colorDonation">#1A635C</color>
-
+    <color name="color1">#424549</color>
+    <color name="color2">#7e455e</color>
+    <color name="color3">#796e25</color>
+    <color name="color4">#59717c</color>
 
 </resources>

@@ -29,14 +29,14 @@
     <string name="breed1">Гарик</string>
     <string name="breed2">Бульдог</string>
     <string name="breed3">Харламов</string>
-    <string name="wtf">wtf</string>
+    <string name="wtf">WWW</string>
     <string name="HP">Здоровье</string>
     <string name="Happiness">Счастье</string>
     <string name="r50">"Протяни ещё 2 дня"</string>
     <string name="r100">"Собачья щедрость"</string>
     <string name="r200">"Собачий магнат"</string>
 
-    <string name="client_ID">1010110510479-p2r12ubpf0e17gh4vjajvr95vmj98d63.apps.googleusercontent.com</string>
+    <string name="client_ID">347210936951-rhre6m7u9ej5jpp9nmo173chlbinsp0d.apps.googleusercontent.com</string>
 <!--    <string name="client_ID">1083886473794-44l57r1gmhbk7vpo58jm4022eeue98mt.apps.googleusercontent.com</string>-->
     <string name="apiv">apiv1</string>
 
@@ -45,6 +45,19 @@
     <string name="googlepay_status_unavailable" translatable="false">Unfortunately, Google Pay is not available on this phone.</string>
     <string name="googlepay_status_checking" translatable="false">Checking if Google Pay is available...</string>
     <string name="payments_show_name" translatable="false">Successfully received payment data for %s!</string>
+    <string name="no_internet">Проверьте соединение с интернетом и повторите попытку</string>
+    <string name="internet_retry">Еще раз</string>
+    <string name="ok">Oк</string>
+    <string name="error_text">Возникла непредвиденная ошибка</string>
+    <string name="my_page">Моя страница</string>
+    <string name="page_animals">Каталог животных</string>
+    <string name="page_shelters">Приюты</string>
+    <string name="page_pet">Мой друг</string>
+    <string name="pet">Pet</string>
+    <string name="shelter">Shelter</string>
+    <string name="profile">profile</string>
+    <string name="help_now">HELP NOW</string>
+    <string name="shelter_visit">Оформить визит в приют</string>
 
 
 </resources>

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hse.projectx.petdonate">
     <application
+        android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,29 +17,66 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".main_screen.MainScreen"></activity>
-        <activity android:name=".startup.Welcome1"></activity>
-        <activity android:name=".startup.Welcome2"></activity>
-        <activity android:name=".startup.ChooseDog"></activity>
-        <activity android:name=".payment.ChooseFood"></activity>
-        <activity android:name=".startup.FirstScreen"></activity>
-        <activity android:name=".startup.SignInActivity"></activity>
-        <activity android:name=".info_screens.ShelterInfoActivity"></activity>
-        <activity android:name=".main_screen.ProfileActivity"></activity>
-        <activity android:name=".payment.CheckoutActivity"></activity>
-        <activity android:name=".forms.BlankShelterActivity"></activity>
-        <activity android:name=".forms.BlankPetActivity"></activity>
-        <activity android:name=".main_screen.ShelterActivity"></activity>
-        <activity android:name=".forms.ThanksBlank"></activity>
-        <activity android:name=".payment.ThanksPayment"></activity>
-        <activity android:name=".main_screen.PetsActivity"></activity>
-        <activity android:name=".info_screens.PetsInfoActivity"></activity>
-        <activity android:name=".payment.ChooseShelter"></activity>
+        <activity
+            android:name=".main_screen.MainScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main_screen.MainPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.Welcome1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.Welcome2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.ChooseDog"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.ChooseFood"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.FirstScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.SignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".info_screens.ShelterInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".main_screen.ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.CheckoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forms.BlankShelterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forms.BlankPetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main_screen.ShelterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forms.ThanksBlank"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.ThanksPayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".main_screen.PetsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".info_screens.PetsInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.ChooseShelter"
+            android:screenOrientation="portrait" />
         <service android:enabled="true" android:name=".utils.MusicServ"/>
 
         <activity
-            android:name=".startup.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name=".startup.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

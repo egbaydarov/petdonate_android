@@ -15,4 +15,16 @@ public class Animal implements Serializable {
     String behavior;
     String gender;
     String picture;
+
+    public Animal(String type, String name, String appear, String behavior, String gender, String picture) {
+        this.type = type;
+        this.name = name;
+        this.appear = appear;
+        this.behavior = behavior;
+        this.gender = gender;
+        this.picture = picture;
+    }
+
+    public Animal() {
+    }
 }

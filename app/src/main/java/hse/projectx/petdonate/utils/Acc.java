@@ -45,7 +45,6 @@ public class Acc extends AppCompatActivity {
         setContentView(R.layout.example_log);
 
         SignInButton googleSignInButton = findViewById(R.id.sign_in_button);
-        Button skipLogButton = findViewById(R.id.buttonSkipLog);
 
         ConfigureGoogleSignIn();
 
@@ -72,7 +71,7 @@ public class Acc extends AppCompatActivity {
                 token = account.getIdToken();
             }
 
-            State.getStateQuery(Acc.this, FirstScreen.class);
+            State.getStateQuery(Acc.this, FirstScreen.class, null);
         } catch (ApiException e) {
             e.printStackTrace();
         }

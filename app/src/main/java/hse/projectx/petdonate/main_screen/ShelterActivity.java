@@ -145,7 +145,6 @@ public class ShelterActivity extends AppCompatActivity {
 
 
     public void OnClickShelter(View view) {
-        State.getShelters(this, true);
     }
 
     public void onClickProfile(View veiw) {
@@ -162,7 +161,6 @@ public class ShelterActivity extends AppCompatActivity {
     }
 
     public void OnClickPets(View view) {
-        State.getShelters(this, false);
     }
 
     public void OnClickMain0(View view) {

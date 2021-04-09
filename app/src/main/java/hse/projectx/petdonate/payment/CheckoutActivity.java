@@ -271,21 +271,21 @@ public class CheckoutActivity extends Activity {
         ImageView itemImage = findViewById(R.id.image_item_image);
         TextView itemPrice = findViewById(R.id.text_item_price);
 
-        long id = getIntent().getLongExtra(ChooseShelter.ID, -1);
-        Shelter shelter = null;
-        for (Shelter sh : State.shelter_ids)
-            if(sh.getId() == id)
-                shelter = sh;
+//        long id = getIntent().getLongExtra(ChooseShelter.ID, -1);
+//        Shelter shelter = null;
+//        for (Shelter sh : State.shelter_ids)
+//            if(sh.getId() == id)
+//                shelter = sh;
+//
+//        Picasso.get()
+//                .load(shelter.getPicture())
+//                .error(R.drawable.baseline_broken_image_black_18dp)// TODO REPLACE IMAGE
+//                .fit()
+//                .centerCrop()
+//                .placeholder(R.drawable.load)// TODO REPLACE IMAGE
+//                .into(itemImage);
 
-        Picasso.get()
-                .load(shelter.getPicture())
-                .error(R.drawable.baseline_broken_image_black_18dp)// TODO REPLACE IMAGE
-                .fit()
-                .centerCrop()
-                .placeholder(R.drawable.load)// TODO REPLACE IMAGE
-                .into(itemImage);
-
-        mDonateItem = new ItemInfo(shelter.getName(), getIntent().getLongExtra("MICROS", -1) * 1000000, shelter.getPicture()); //TODO НОРМАЛЬНО СДЕЛАЙ
+        mDonateItem = new ItemInfo("TODO", getIntent().getLongExtra("MICROS", -1) * 1000000, "PIC"); //TODO НОРМАЛЬНО СДЕЛАЙ
 
         itemName.setText(mDonateItem.getName());
         itemPrice.setText("Cумма перевода: " + PaymentsUtil.microsToString(mDonateItem.getPriceMicros()) + "₽");

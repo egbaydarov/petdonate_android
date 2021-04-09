@@ -30,7 +30,7 @@ public class PetsInfoActivity extends AppCompatActivity {
         setContentView(R.layout.pets_page);
 
         ImageView image = (ImageView) findViewById(R.id.an_pic);
-        an = (Animal)getIntent().getSerializableExtra(PetsActivity.pet_instance);
+        an = (Animal)getIntent().getSerializableExtra(PetsActivity.PET_INSTANCE);
         Picasso.get().load(an.getPicture())
                 .error(R.drawable.baseline_broken_image_black_18dp)//TODO REPLACE IMAGE
                 .fit()
@@ -68,7 +68,7 @@ public class PetsInfoActivity extends AppCompatActivity {
     public void OnClickAccept(View veiw) {
         TextView tw_location = findViewById(R.id.an_location);
         Intent intent =  new Intent(this, BlankPetActivity.class);
-        intent.putExtra(PetsActivity.pet_instance, an);
+        intent.putExtra(PetsActivity.PET_INSTANCE, an);
         intent.putExtra(PetsActivity.NAME, tw_location.getText());
         intent.putExtra(PetsActivity.SHELTER_ID, getIntent().getLongExtra(PetsActivity.SHELTER_ID, 0));
         startActivity(intent);

@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shelter_page_back">
+    >
 
     <Button
         android:id="@+id/back2"
@@ -30,6 +30,7 @@
         android:id="@+id/sh_pic"
         android:layout_width="match_parent"
         android:layout_height="220dp"
+        android:background="@drawable/shelter_dogs"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,17 +325,18 @@
         </LinearLayout>
     </LinearLayout>
 
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_help"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/shelter_but"
         android:fontFamily="@font/main_temp"
         android:onClick="OnClickAccept"
-        android:text="Оформить визит в приют"
+        android:text="@string/help_now"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -343,6 +345,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
         app:layout_constraintVertical_bias="0.0" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
